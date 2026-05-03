@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Phitron Assignment Evaluator",
+  "version": "0.1.0",
+  "description": "AI-powered assignment evaluator for educators",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab",
+    "sidePanel"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Phitron Evaluator"
+  },
+  "options_page": "options.html",
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "host_permissions": [
+    "https://api.openai.com/*",
+    "*://phitron.io/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://phitron.io/instructor-dashboard/*"],
+      "js": ["phitronContent.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
