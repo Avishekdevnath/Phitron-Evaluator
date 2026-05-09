@@ -21,16 +21,16 @@
   },
   "host_permissions": [
     "https://api.openai.com/*",
-    "*://phitron.io/*"
+    "*://phitron.io/instructor-dashboard/my-assignment*"
   ],
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["*://phitron.io/instructor-dashboard/my-assignment*"],
       "js": ["content.js"],
       "run_at": "document_end"
     },
     {
-      "matches": ["*://phitron.io/instructor-dashboard/*"],
+      "matches": ["*://phitron.io/instructor-dashboard/my-assignment*"],
       "js": ["phitronContent.js"],
       "run_at": "document_end"
     }
