@@ -1,0 +1,921 @@
+<html lang="en" class="light"><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 6 Sharp Duotone";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}</style><style type="text/css">.swal-icon--error{border-color:#f27474;-webkit-animation:animateErrorIcon .5s;animation:animateErrorIcon .5s}.swal-icon--error__x-mark{position:relative;display:block;-webkit-animation:animateXMark .5s;animation:animateXMark .5s}.swal-icon--error__line{position:absolute;height:5px;width:47px;background-color:#f27474;display:block;top:37px;border-radius:2px}.swal-icon--error__line--left{-webkit-transform:rotate(45deg);transform:rotate(45deg);left:17px}.swal-icon--error__line--right{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);right:16px}@-webkit-keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@-webkit-keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}@keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}.swal-icon--warning{border-color:#f8bb86;-webkit-animation:pulseWarning .75s infinite alternate;animation:pulseWarning .75s infinite alternate}.swal-icon--warning__body{width:5px;height:47px;top:10px;border-radius:2px;margin-left:-2px}.swal-icon--warning__body,.swal-icon--warning__dot{position:absolute;left:50%;background-color:#f8bb86}.swal-icon--warning__dot{width:7px;height:7px;border-radius:50%;margin-left:-4px;bottom:-11px}@-webkit-keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}@keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}.swal-icon--success{border-color:#a5dc86}.swal-icon--success:after,.swal-icon--success:before{content:"";border-radius:50%;position:absolute;width:60px;height:120px;background:#fff;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal-icon--success:before{border-radius:120px 0 0 120px;top:-7px;left:-33px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:60px 60px;transform-origin:60px 60px}.swal-icon--success:after{border-radius:0 120px 120px 0;top:-11px;left:30px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 60px;transform-origin:0 60px;-webkit-animation:rotatePlaceholder 4.25s ease-in;animation:rotatePlaceholder 4.25s ease-in}.swal-icon--success__ring{width:80px;height:80px;border:4px solid hsla(98,55%,69%,.2);border-radius:50%;box-sizing:content-box;position:absolute;left:-4px;top:-4px;z-index:2}.swal-icon--success__hide-corners{width:5px;height:90px;background-color:#fff;padding:1px;position:absolute;left:28px;top:8px;z-index:1;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal-icon--success__line{height:5px;background-color:#a5dc86;display:block;border-radius:2px;position:absolute;z-index:2}.swal-icon--success__line--tip{width:25px;left:14px;top:46px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-animation:animateSuccessTip .75s;animation:animateSuccessTip .75s}.swal-icon--success__line--long{width:47px;right:8px;top:38px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-animation:animateSuccessLong .75s;animation:animateSuccessLong .75s}@-webkit-keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@-webkit-keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}@keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}.swal-icon--info{border-color:#c9dae1}.swal-icon--info:before{width:5px;height:29px;bottom:17px;border-radius:2px;margin-left:-2px}.swal-icon--info:after,.swal-icon--info:before{content:"";position:absolute;left:50%;background-color:#c9dae1}.swal-icon--info:after{width:7px;height:7px;border-radius:50%;margin-left:-3px;top:19px}.swal-icon{width:80px;height:80px;border-width:4px;border-style:solid;border-radius:50%;padding:0;position:relative;box-sizing:content-box;margin:20px auto}.swal-icon:first-child{margin-top:32px}.swal-icon--custom{width:auto;height:auto;max-width:100%;border:none;border-radius:0}.swal-icon img{max-width:100%;max-height:100%}.swal-title{color:rgba(0,0,0,.65);font-weight:600;text-transform:none;position:relative;display:block;padding:13px 16px;font-size:27px;line-height:normal;text-align:center;margin-bottom:0}.swal-title:first-child{margin-top:26px}.swal-title:not(:first-child){padding-bottom:0}.swal-title:not(:last-child){margin-bottom:13px}.swal-text{font-size:16px;position:relative;float:none;line-height:normal;vertical-align:top;text-align:left;display:inline-block;margin:0;padding:0 10px;font-weight:400;color:rgba(0,0,0,.64);max-width:calc(100% - 20px);overflow-wrap:break-word;box-sizing:border-box}.swal-text:first-child{margin-top:45px}.swal-text:last-child{margin-bottom:45px}.swal-footer{text-align:right;padding-top:13px;margin-top:13px;padding:13px 16px;border-radius:inherit;border-top-left-radius:0;border-top-right-radius:0}.swal-button-container{margin:5px;display:inline-block;position:relative}.swal-button{background-color:#7cd1f9;color:#fff;border:none;box-shadow:none;border-radius:5px;font-weight:600;font-size:14px;padding:10px 24px;margin:0;cursor:pointer}.swal-button:not([disabled]):hover{background-color:#78cbf2}.swal-button:active{background-color:#70bce0}.swal-button:focus{outline:none;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(43,114,165,.29)}.swal-button[disabled]{opacity:.5;cursor:default}.swal-button::-moz-focus-inner{border:0}.swal-button--cancel{color:#555;background-color:#efefef}.swal-button--cancel:not([disabled]):hover{background-color:#e8e8e8}.swal-button--cancel:active{background-color:#d7d7d7}.swal-button--cancel:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(116,136,150,.29)}.swal-button--danger{background-color:#e64942}.swal-button--danger:not([disabled]):hover{background-color:#df4740}.swal-button--danger:active{background-color:#cf423b}.swal-button--danger:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(165,43,43,.29)}.swal-content{padding:0 20px;margin-top:20px;font-size:medium}.swal-content:last-child{margin-bottom:20px}.swal-content__input,.swal-content__textarea{-webkit-appearance:none;background-color:#fff;border:none;font-size:14px;display:block;box-sizing:border-box;width:100%;border:1px solid rgba(0,0,0,.14);padding:10px 13px;border-radius:2px;transition:border-color .2s}.swal-content__input:focus,.swal-content__textarea:focus{outline:none;border-color:#6db8ff}.swal-content__textarea{resize:vertical}.swal-button--loading{color:transparent}.swal-button--loading~.swal-button__loader{opacity:1}.swal-button__loader{position:absolute;height:auto;width:43px;z-index:2;left:50%;top:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);text-align:center;pointer-events:none;opacity:0}.swal-button__loader div{display:inline-block;float:none;vertical-align:baseline;width:9px;height:9px;padding:0;border:none;margin:2px;opacity:.4;border-radius:7px;background-color:hsla(0,0%,100%,.9);transition:background .2s;-webkit-animation:swal-loading-anim 1s infinite;animation:swal-loading-anim 1s infinite}.swal-button__loader div:nth-child(3n+2){-webkit-animation-delay:.15s;animation-delay:.15s}.swal-button__loader div:nth-child(3n+3){-webkit-animation-delay:.3s;animation-delay:.3s}@-webkit-keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}@keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}.swal-overlay{position:fixed;top:0;bottom:0;left:0;right:0;text-align:center;font-size:0;overflow-y:auto;background-color:rgba(0,0,0,.4);z-index:10000;pointer-events:none;opacity:0;transition:opacity .3s}.swal-overlay:before{content:" ";display:inline-block;vertical-align:middle;height:100%}.swal-overlay--show-modal{opacity:1;pointer-events:auto}.swal-overlay--show-modal .swal-modal{opacity:1;pointer-events:auto;box-sizing:border-box;-webkit-animation:showSweetAlert .3s;animation:showSweetAlert .3s;will-change:transform}.swal-modal{width:478px;opacity:0;pointer-events:none;background-color:#fff;text-align:center;border-radius:5px;position:static;margin:20px auto;display:inline-block;vertical-align:middle;-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;z-index:10001;transition:opacity .2s,-webkit-transform .3s;transition:transform .3s,opacity .2s;transition:transform .3s,opacity .2s,-webkit-transform .3s}@media (max-width:500px){.swal-modal{width:calc(100% - 20px)}}@-webkit-keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learn and master programming to open a new career opportunity. Enjoy the most effective and fun way to learn programming as an absolute beginner that will lead you to a full time job.">
+    <meta name="author" content="Phitron">
+    <meta name="keyword" content="Python, Data structure, algorithm, Programming, Python Programming, CSE, oop, CSE fundamental, Problem Solving, Cloud Computing, AWS">
+    <meta property="og:title" content="Phitron">
+    <meta property="og:description" content="Learn with fun to make your dream come true.">
+    <meta property="og:image" content="/thumbnail.png">
+    <meta name="twitter:image" content="/thumbnail.png">
+    <title>Assignment Table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&amp;family=Montserrat:wght@300;400;500;600;700;800&amp;family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Fira+Sans:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;700&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <!-- Google Tag Manager -->
+    <script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/gTpTIWhbKpxADzTzkcabhXN4/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-H/5bR8BVxoDZIIp1lThXvsuAj/gHvImPQ0kayVpCevmOrRalo0FwJubK3EoX8w37"></script><script async="" src="https://scripts.clarity.ms/0.8.61/clarity.js"></script><script type="text/javascript" async="" src="https://www.clarity.ms/tag/vhu4n57k5o?ref=gtm"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-VX31RZ3L01&amp;cx=c&amp;gtm=4e64t1"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-P2DRNTWJ"></script><script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P2DRNTWJ");
+    </script>
+    <!-- End Google Tag Manager -->
+    <script type="module" crossorigin="" src="/assets/index-SqK1LOc-.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-C97KReXw.css">
+  <link rel="modulepreload" as="script" crossorigin="" href="/assets/InstructorLayout-Cgg2Y6Qr.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/helpdesk-Dw6BuS9e.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/TheSidebar-umQiQPuE.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/CWidgetSimple-BFrVsvL1.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Transition-CUW_8xjM.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/TransitionGroupContext-BlvQT2Iy.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/createPopper-DCXVUHe8.js"><link rel="stylesheet" crossorigin="" href="/assets/CWidgetSimple-C9uZlEUY.css"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useSelector-Bo_C6KYG.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/logo-white-lZZ2Szzu.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/logo-yqIdNevy.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/supportSessionService-dLo8Gxl-.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index.esm-fCzEWMXE.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/iconBase-DK4_1vUS.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index.esm-CefPqO8W.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index.esm-yU_XhpXd.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index.esm-B0RpX9Xv.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index.esm-clOZgf8P.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index.esm-BEuFtegu.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index.esm-CEeMRXVu.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index.esm-BRu0sqEc.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index.esm-QwqGsHV1.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index.esm-B7kpdQfA.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index.esm-CU1jUc80.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index.esm-Bb-n6b_v.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/profileImage-CD7N1xQ1.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/CustomModal-BxI1sm0p.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/modal-D9DiCfLV.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index.es-Cfbe6prT.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/styled-CVhZuWDq.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/grey-EsuAVNz6.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/defaultTheme-RqAIWZLO.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/classCallCheck-MFKM5G8b.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index-hR7krDle.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/warning-Dr892ovb.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/react-lifecycles-compat.es-D4Hak9E3.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/react-lifecycles-compat.es-BO9d1diy.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Button-DJRmfcLK.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/capitalize-C-fmOiCs.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/ButtonBase-Co9dQhi7.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useForkRef-D17pZjUR.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useIsFocusVisible-CL3KXEqZ.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/InstuctorAssignmentStats-u84N4_LU.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/getImage-BH1ec9Ik.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/makeStyles-CFpE8w0_.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/withStyles-BEQFPZ7u.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index-DbDD7H10.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/tslib.es6-BXDc_oMC.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index.esm-CSlP48NR.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Avatar-BSQUzd4q.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/createSvgIcon-BI82eMll.js"><link rel="stylesheet" crossorigin="" href="/assets/InstructorLayout-g15EDRea.css"><script id="google-recaptcha-v3" src="https://www.google.com/recaptcha/api.js?render=6Ld8JHsqAAAAAOy77PYioi_IcSSRkiIbZ8L7KZt-"></script><link rel="modulepreload" as="script" crossorigin="" href="/assets/InstructorAssignments-D27fMaBl.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index-SqK1LOc-.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/batchService-IW33sBc-.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Assignments-DAc6MHCU.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/AssignmentListTable-D2siDYdS.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/loading-C25QWOYE.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Support-circle-DHLqMLWg.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Pending-circle-DcgVKBHq.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/refresh-Dm-okLrK.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useSearchParams-6vMbUFwO.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/assignmentFeedbackService-D2w8r0wk.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/ExaminerFeedbackService-CfFsHXbu.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/assignmentService-DcJGXBft.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/base-CumTa13P.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/ReactToastify-Br6Qp3_K.js"><link rel="stylesheet" crossorigin="" href="/assets/ReactToastify-BLY3tSOY.css"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Lottie-Ce5ZOih-.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/CustomPagination-CZfh_fcT.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Pagination-DotOJjZt.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useControlled-5vFBhl2e.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useTheme-BpWKPGN0.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Editor-B7Ny-wWu.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index-BxiERfWR.js"><link rel="stylesheet" crossorigin="" href="/assets/Editor-7oN3-GhD.css"><link rel="modulepreload" as="script" crossorigin="" href="/assets/teamAssignmentService-BEYboCo6.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index-iQ6-2qhJ.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/MyAssignments-DGHGddZM.js"><style data-jss="" data-meta="MuiTouchRipple">
+.MuiTouchRipple-root {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  position: absolute;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.MuiTouchRipple-ripple {
+  opacity: 0;
+  position: absolute;
+}
+.MuiTouchRipple-rippleVisible {
+  opacity: 0.3;
+  animation: MuiTouchRipple-keyframes-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+.MuiTouchRipple-ripplePulsate {
+  animation-duration: 200ms;
+}
+.MuiTouchRipple-child {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.MuiTouchRipple-childLeaving {
+  opacity: 0;
+  animation: MuiTouchRipple-keyframes-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.MuiTouchRipple-childPulsate {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: MuiTouchRipple-keyframes-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-enter {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-exit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style><style data-jss="" data-meta="MuiButtonBase">
+.MuiButtonBase-root {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiButtonBase-root::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-root.Mui-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+@media print {
+  .MuiButtonBase-root {
+    -webkit-print-color-adjust: exact;
+  }
+}
+</style><style data-jss="" data-meta="MuiSvgIcon">
+.MuiSvgIcon-root {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+.MuiSvgIcon-colorPrimary {
+  color: #3f51b5;
+}
+.MuiSvgIcon-colorSecondary {
+  color: #f50057;
+}
+.MuiSvgIcon-colorAction {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiSvgIcon-colorError {
+  color: #f44336;
+}
+.MuiSvgIcon-colorDisabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+.MuiSvgIcon-fontSizeInherit {
+  font-size: inherit;
+}
+.MuiSvgIcon-fontSizeSmall {
+  font-size: 1.25rem;
+}
+.MuiSvgIcon-fontSizeLarge {
+  font-size: 2.1875rem;
+}
+</style><style data-jss="" data-meta="MuiPaginationItem">
+.MuiPaginationItem-root {
+  color: rgba(0, 0, 0, 0.87);
+  height: 32px;
+  margin: 0 3px;
+  padding: 0 6px;
+  font-size: 0.875rem;
+  min-width: 32px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  border-radius: 16px;
+  letter-spacing: 0.01071em;
+}
+.MuiPaginationItem-page {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.MuiPaginationItem-page:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.MuiPaginationItem-page.Mui-focusVisible {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.MuiPaginationItem-page.Mui-selected {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.MuiPaginationItem-page.Mui-disabled {
+  opacity: 0.38;
+}
+.MuiPaginationItem-page.Mui-selected:hover, .MuiPaginationItem-page.Mui-selected.Mui-focusVisible {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.MuiPaginationItem-page.Mui-selected.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+@media (hover: none) {
+  .MuiPaginationItem-page.Mui-selected:hover, .MuiPaginationItem-page.Mui-selected.Mui-focusVisible {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+}
+@media (hover: none) {
+  .MuiPaginationItem-page:hover {
+    background-color: transparent;
+  }
+}
+.MuiPaginationItem-sizeSmall {
+  height: 26px;
+  margin: 0 1px;
+  padding: 0 4px;
+  min-width: 26px;
+  border-radius: 13px;
+}
+.MuiPaginationItem-sizeSmall .MuiPaginationItem-icon {
+  font-size: 1.125rem;
+}
+.MuiPaginationItem-sizeLarge {
+  height: 40px;
+  padding: 0 10px;
+  font-size: 0.9375rem;
+  min-width: 40px;
+  border-radius: 20px;
+}
+.MuiPaginationItem-sizeLarge .MuiPaginationItem-icon {
+  font-size: 1.375rem;
+}
+.MuiPaginationItem-textPrimary.Mui-selected {
+  color: #fff;
+  background-color: #3f51b5;
+}
+.MuiPaginationItem-textPrimary.Mui-selected:hover, .MuiPaginationItem-textPrimary.Mui-selected.Mui-focusVisible {
+  background-color: #303f9f;
+}
+.MuiPaginationItem-textPrimary.Mui-selected.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiPaginationItem-textPrimary.Mui-selected:hover, .MuiPaginationItem-textPrimary.Mui-selected.Mui-focusVisible {
+    background-color: #3f51b5;
+  }
+}
+.MuiPaginationItem-textSecondary.Mui-selected {
+  color: #fff;
+  background-color: #f50057;
+}
+.MuiPaginationItem-textSecondary.Mui-selected:hover, .MuiPaginationItem-textSecondary.Mui-selected.Mui-focusVisible {
+  background-color: #c51162;
+}
+.MuiPaginationItem-textSecondary.Mui-selected.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiPaginationItem-textSecondary.Mui-selected:hover, .MuiPaginationItem-textSecondary.Mui-selected.Mui-focusVisible {
+    background-color: #f50057;
+  }
+}
+.MuiPaginationItem-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+}
+.MuiPaginationItem-outlined.Mui-selected.Mui-disabled {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiPaginationItem-outlinedPrimary.Mui-selected {
+  color: #3f51b5;
+  border: 1px solid rgba(63, 81, 181, 0.5);
+  background-color: rgba(63, 81, 181, 0.12);
+}
+.MuiPaginationItem-outlinedPrimary.Mui-selected:hover, .MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-focusVisible {
+  background-color: rgba(63, 81, 181, 0.16);
+}
+.MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiPaginationItem-outlinedPrimary.Mui-selected:hover, .MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-focusVisible {
+    background-color: transparent;
+  }
+}
+.MuiPaginationItem-outlinedSecondary.Mui-selected {
+  color: #f50057;
+  border: 1px solid rgba(245, 0, 87, 0.5);
+  background-color: rgba(245, 0, 87, 0.12);
+}
+.MuiPaginationItem-outlinedSecondary.Mui-selected:hover, .MuiPaginationItem-outlinedSecondary.Mui-selected.Mui-focusVisible {
+  background-color: rgba(245, 0, 87, 0.16);
+}
+.MuiPaginationItem-outlinedSecondary.Mui-selected.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiPaginationItem-outlinedSecondary.Mui-selected:hover, .MuiPaginationItem-outlinedSecondary.Mui-selected.Mui-focusVisible {
+    background-color: transparent;
+  }
+}
+.MuiPaginationItem-rounded {
+  border-radius: 4px;
+}
+.MuiPaginationItem-ellipsis {
+  height: auto;
+}
+.MuiPaginationItem-ellipsis.Mui-disabled {
+  opacity: 0.38;
+}
+.MuiPaginationItem-icon {
+  margin: 0 -8px;
+  font-size: 1.25rem;
+}
+</style><style data-jss="" data-meta="MuiPagination">
+.MuiPagination-ul {
+  margin: 0;
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+}
+</style></head>
+
+  <body class="ReactModal__Body--open"><div data-react-modal-body-trap="" tabindex="0" style="position: absolute; opacity: 0;"></div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P2DRNTWJ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <div id="root" aria-hidden="true"><div class="c-app ph-admin-template instructor__dashboard c-default-layout"><div class="c-sidebar c-sidebar-dark c-sidebar-show c-sidebar-fixed c-sidebar-light"><a aria-current="page" class="c-sidebar-brand d-md-down-none active" href="/"><img class="img-fluid mr-2  " src="/assets/logo-white-C7XZNabn.png" alt=".."></a><ul class="c-sidebar-nav h-100 ps" style="position: relative;"><div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" _id="2" order="2" role="instructor" tabindex="0" href="/instructor-dashboard"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="c-sidebar-nav-icon " height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 13H11V3H3V13ZM3 21H11V15H3V21ZM13 21H21V11H13V21ZM13 3V9H21V3H13Z"></path></svg>Dashboard</a></li><li class="c-sidebar-nav-dropdown" _id="4" order="4" role="admin,instructor"><a class="c-sidebar-nav-dropdown-toggle" tabindex="0" aria-label="menu dropdown"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="c-sidebar-nav-icon " height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.486 2 2 6.486 2 12v4.143C2 17.167 2.897 18 4 18h1a1 1 0 0 0 1-1v-5.143a1 1 0 0 0-1-1h-.908C4.648 6.987 7.978 4 12 4s7.352 2.987 7.908 6.857H19a1 1 0 0 0-1 1V18c0 1.103-.897 2-2 2h-2v-1h-4v3h6c2.206 0 4-1.794 4-4 1.103 0 2-.833 2-1.857V12c0-5.514-4.486-10-10-10z"></path></svg>Support Management</a><ul class="c-sidebar-nav-dropdown-items"><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" tabindex="-1" href="/instructor-dashboard/date-wise-session-list">Daily Sessions</a></li><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" tabindex="-1" href="/instructor-dashboard/support-session-list">Support Session list</a></li><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" tabindex="-1" href="/instructor-dashboard/session-categories">Session Categories</a></li><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" tabindex="-1" href="/instructor-dashboard/session-events">Session Events</a></li><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" tabindex="-1" href="/instructor-dashboard/instructor-information-list">Instructor list</a></li><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" tabindex="-1" href="/instructor-dashboard/support-session-weekly">Support Session Weekly</a></li></ul></li><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" _id="9" order="10" role="instructor" tabindex="0" href="/instructor-dashboard/support-session"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="c-sidebar-nav-icon " height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.486 2 2 6.486 2 12v4.143C2 17.167 2.897 18 4 18h1a1 1 0 0 0 1-1v-5.143a1 1 0 0 0-1-1h-.908C4.648 6.987 7.978 4 12 4s7.352 2.987 7.908 6.857H19a1 1 0 0 0-1 1V18c0 1.103-.897 2-2 2h-2v-1h-4v3h6c2.206 0 4-1.794 4-4 1.103 0 2-.833 2-1.857V12c0-5.514-4.486-10-10-10z"></path></svg>Support Session</a></li><li class="c-sidebar-nav-dropdown" _id="11" order="12" role="admin,instructor"><a class="c-sidebar-nav-dropdown-toggle" tabindex="0" aria-label="menu dropdown"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="c-sidebar-nav-icon " height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M440.08 341.31c-1.66-2-3.29-4-4.89-5.93-22-26.61-35.31-42.67-35.31-118 0-39-9.33-71-27.72-95-13.56-17.73-31.89-31.18-56.05-41.12a3 3 0 01-.82-.67C306.6 51.49 282.82 32 256 32s-50.59 19.49-59.28 48.56a3.13 3.13 0 01-.81.65c-56.38 23.21-83.78 67.74-83.78 136.14 0 75.36-13.29 91.42-35.31 118-1.6 1.93-3.23 3.89-4.89 5.93a35.16 35.16 0 00-4.65 37.62c6.17 13 19.32 21.07 34.33 21.07H410.5c14.94 0 28-8.06 34.19-21a35.17 35.17 0 00-4.61-37.66zM256 480a80.06 80.06 0 0070.44-42.13 4 4 0 00-3.54-5.87H189.12a4 4 0 00-3.55 5.87A80.06 80.06 0 00256 480z"></path></svg>Notification</a><ul class="c-sidebar-nav-dropdown-items"><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" tabindex="-1" href="/instructor-dashboard/create-notification">Add Notification</a></li><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" tabindex="-1" href="/instructor-dashboard/schedual-notification-list">Schedule Notification List</a></li><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" tabindex="-1" href="/instructor-dashboard/popup-notification">Pop up</a></li><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" tabindex="-1" href="/instructor-dashboard/notification-history">Notification History</a></li><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" tabindex="-1" href="/instructor-dashboard/Announcement-history">Announcement History</a></li></ul></li><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" _id="16" order="17" role="instructor" tabindex="0" href="/instructor-dashboard/assignments"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="c-sidebar-nav-icon " height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5 22h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2h-2a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1H5c-1.103 0-2 .897-2 2v15c0 1.103.897 2 2 2zM5 5h2v2h10V5h2v15H5V5z"></path><path d="m11 13.586-1.793-1.793-1.414 1.414L11 16.414l5.207-5.207-1.414-1.414z"></path></svg>Assignment</a></li><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link c-active" _id="17" order="18" role="instructor" tabindex="0" href="/instructor-dashboard/my-assignment" aria-current="page"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" class="c-sidebar-nav-icon " height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 236c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-72v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm96-114.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"></path></svg>My Assignment</a></li><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" _id="19" order="20" role="instructor" tabindex="0" href="/instructor-dashboard/student-Sms-email-send"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="c-sidebar-nav-icon " height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>Student sms email Send</a></li><li class="c-sidebar-nav-dropdown" _id="22" order="22" role="admin,instructor"><a class="c-sidebar-nav-dropdown-toggle" tabindex="0" aria-label="menu dropdown"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="c-sidebar-nav-icon " height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M542.22 32.05c-54.8 3.11-163.72 14.43-230.96 55.59-4.64 2.84-7.27 7.89-7.27 13.17v363.87c0 11.55 12.63 18.85 23.28 13.49 69.18-34.82 169.23-44.32 218.7-46.92 16.89-.89 30.02-14.43 30.02-30.66V62.75c.01-17.71-15.35-31.74-33.77-30.7zM264.73 87.64C197.5 46.48 88.58 35.17 33.78 32.05 15.36 31.01 0 45.04 0 62.75V400.6c0 16.24 13.13 29.78 30.02 30.66 49.49 2.6 149.59 12.11 218.77 46.95 10.62 5.35 23.21-1.94 23.21-13.46V100.63c0-5.29-2.62-10.14-7.27-12.99z"></path></svg>Phitron Book</a><ul class="c-sidebar-nav-dropdown-items"><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" tabindex="-1" href="/instructor-dashboard/phitron-book-list">Phitron Book List</a></li></ul></li><li class="c-sidebar-nav-dropdown" _id="23" order="23" role="instructor"><a class="c-sidebar-nav-dropdown-toggle" tabindex="0" aria-label="menu dropdown"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="c-sidebar-nav-icon " height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M13 18V20H17V22H7V20H11V18H2.9918C2.44405 18 2 17.5511 2 16.9925V4.00748C2 3.45107 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44892 22 4.00748V16.9925C22 17.5489 21.5447 18 21.0082 18H13Z"></path></svg>Device Management</a><ul class="c-sidebar-nav-dropdown-items"><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" tabindex="-1" href="/instructor-dashboard/user-device">Clear Device</a></li></ul></li><li class="c-sidebar-nav-dropdown" _id="25" order="25" role="admin,instructor"><a class="c-sidebar-nav-dropdown-toggle" tabindex="0" aria-label="menu dropdown"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" class="c-sidebar-nav-icon " height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>Facebook Information</a><ul class="c-sidebar-nav-dropdown-items"><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" tabindex="-1" href="/instructor-dashboard/rapid-approval">Rapid Approval </a></li><li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" tabindex="-1" href="/instructor-dashboard/student-facebook-information">Approval List</a></li></ul></li></ul></div><div class="c-wrapper"><div class="row"><div class="c-body col-md-12"><div class="d-flex pl-4 pr-3 align-items-center justify-content-between"><div class="d-flex py-3 px-2 align-items-center"><button class="btn p-0 d-flex"><svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="font-size: 26px;"><path d="M2 5.99519C2 5.44556 2.44556 5 2.99519 5H11.0048C11.5544 5 12 5.44556 12 5.99519C12 6.54482 11.5544 6.99039 11.0048 6.99039H2.99519C2.44556 6.99039 2 6.54482 2 5.99519Z" fill="currentColor"></path><path d="M2 11.9998C2 11.4501 2.44556 11.0046 2.99519 11.0046H21.0048C21.5544 11.0046 22 11.4501 22 11.9998C22 12.5494 21.5544 12.9949 21.0048 12.9949H2.99519C2.44556 12.9949 2 12.5494 2 11.9998Z" fill="currentColor"></path><path d="M2.99519 17.0096C2.44556 17.0096 2 17.4552 2 18.0048C2 18.5544 2.44556 19 2.99519 19H15.0048C15.5544 19 16 18.5544 16 18.0048C16 17.4552 15.5544 17.0096 15.0048 17.0096H2.99519Z" fill="currentColor"></path></svg><p class="m-0 ml-3 text-capitalize">my assignment</p></button></div><div class="d-flex align-items-center"><ul class="c-header-nav"><li class="c-header-nav-item"><a href="https://helpdesk.phitron.io" target="_blank" rel="noreferrer" class="mx-2 text-black-50">Helpdesk</a></li><li class="c-header-nav-item"><a class="p-0 mx-2 text-black-50 c-header-nav-link" href="/ai-ml-course">AI/ML</a></li></ul><button class="btn collapse-btn" style="font-size: 24px; color: rgb(66, 137, 255);"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M301.3 147.6c-7.5-7.5-19.8-7.5-27.3 0l-95.4 95.7c-7.3 7.3-7.5 19.1-.6 26.6l94 94.3c3.8 3.8 8.7 5.7 13.7 5.7 4.9 0 9.9-1.9 13.6-5.6 7.5-7.5 7.6-19.7 0-27.3l-79.8-81 81.9-81.1c7.5-7.5 7.5-19.7-.1-27.3z"></path><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm124.4 332.4C347.2 413.7 303 432 256 432s-91.2-18.3-124.4-51.6C98.3 347.2 80 303 80 256s18.3-91.2 51.6-124.4C164.8 98.3 209 80 256 80s91.2 18.3 124.4 51.6C413.7 164.8 432 209 432 256s-18.3 91.2-51.6 124.4z"></path></svg></button></div></div><main class="c-main"><div class="container-fluid"><div class="fade show" style=""><div class="mx-auto row"><div class="col-md-12"><div class="Toastify"></div><div class="row"><div class="col-12 col-md-12"><div class="stats row"><div class="col-sm-4 col-lg-4" style="cursor: pointer;"><div class="card" style=""><div class="card-body"><div class="px-md-3"><img src="data:image/png;base64,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" alt=""><div class="mt-3"><p class="title mb-2">Assignments Pending</p><h4 class="value m-0">0</h4></div></div></div></div></div><div class="col-sm-4 col-lg-4" style="cursor: pointer;"><div class="card" style="background-color: rgb(242, 255, 240);"><div class="card-body"><div class="px-md-3"><img src="data:image/png;base64,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" alt=""><div class="mt-3"><p class="title mb-2">Assignments Done</p><h4 class="value m-0">218</h4></div></div></div></div></div><div class="col-sm-4 col-lg-4" style="cursor: pointer;"><div class="card"><div class="card-body"><div class="px-md-3"><img src="data:image/png;base64,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" alt=""><div class="mt-3"><p class="title mb-2">Assignments Re-check</p><h4 class="value m-0">1</h4></div></div></div></div></div></div><div class="custom-table-component"><div></div><div class="card"><header class="card-header"><div class="row"><div class="col-md-6 d-flex"><h5 class="m-0">Assignments Done</h5><button class="btn pl-2"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAiCAYAAADYmxC7AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzZfPbxNHFMffzK5NKirVi+ihNIhNadLe6txQ64jNoUoIVrH/gppDiaoeEv6C2H9B7EMVkR5C/oHGSKgGeohRK9SjryVCWdpAaJG6hrbE2J55vFmcsP7Bep1sEN+Dvft2Zvazb968ecMgJI2WljIMuMkYVAXKSrM2VLHTF6uwDzEISWOlK1lk/Kw7KMc4IMQQWAUkFhogyva5b+2gY4UG1anRW9/HudQtZGyObk1609W6ELkgcIcG5dXpm1dSGrBFdS0EXr43M1uEt0VqisduLuPYzz8s+LV7I57y6uPSksU1bQ0Yy9/98pschAn12HEs4PoFjtJCgLhnwKoKcIliVQCUPzAMu7OvijcGkXUmMff79Gz+wFDbjmNGmLYCgFa/tjS4LVEW3jeMrhe7KYRrK9hsjG+c/67S0S+4lHc442vkmRgMJFbWUKQNw2jLW6M3lvNEcHZj6tK4184DjuoCMcbXBwdSQktSX8dx2vo2jkSylGzN0dJyZmAoNWXkoRU4gFTcCa4tem32JGV8gQWmwdzAUBGuLaBKgAcVYsZdIB7Vh6J5Io6rVQlBoZSX1GAQkhjT2nKU8hYilMmeCgylvAQBtFOrQb1RD9ASLWdn55TXwgGv0c9nu/d6vyEYYhzBD2YH7PtbUK833PtjRgxODp8APzVrtTT9uWnik1vLKp6Q0RR+Wloypa5/3ddT3sTYS14gpX+cKjz667FfF6oi+J5XEHGc3pGly5jk2joKNPagHn2VmNtOJtqmqnMJd+q//5+1Ae3q6dN/IajuTs1miOxaC/H2xvSleRdKwUgJeUXcCeanaCTS065pGgwiBSYA0y4giT9ITqRa7isTsU3uzGzNfO4+bGXg11aP0WgE3j16tMtuGO+Br6R80mm6N/WqnOEfXv+lKKWkeWUFWq8xJsRk41nUU++wit/45qlhOH78GLwzNOQCnv7IdIO9j8p+D/f2vs2UFTvSbDoQleaJH+/c37VTspun7WURQpSG0ujcB73aC/SRYrlKy9+G5yztbUA54yr4TOHAorLYD6gNSkkytkpTeMFrUwMglR8QCg9UG1Lm+rVrg6rrukpo1p/JhOW1Uz2UVeUHHFBUW+V6FX2+UGoKJUCBFnRXWmiguKiKNtinyNu5XsVeXyj35bqepb/4w/NfzHvt6gup9B2nr12FAeSWxygvv/R24D7dUrmLAa6pVDH8052ulPC342Q0xn3LGReGQVHFUJAp6+jbWw+SiSw9nCOwyV5gLTg6AIDl7mWIdOBkNrV/Qu6v0EZTHOmzyvYlBfYwmXD+ODeRgjeovgeHlscWqLjIPxeNwsiN32w4ZAU6zWxPnzFR09bVspACcxQn5cOEG+iItTUzkeFMLlDsmMRXlIi3BWOVpt601fORYjig+zohq+RKHVMEpoo1a9dOJ+LJk9d/LcPboE3Lim2mzpgQkl4A+obMe9+DO5cAAAAASUVORK5CYII=" alt="" width="38" style="cursor: pointer;"></button></div><div class="col-md-6"><div class="float-right"><button class="low-op-btn btn btn-outline-primary mx-2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="filter" class="svg-inline--fa fa-filter mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M3.9 54.9C10.5 40.9 24.5 32 40 32l432 0c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9 320 448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6l0-79.1L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"></path></svg>Save filter</button><button class="low-op-btn btn btn-outline-primary mr-2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" class="svg-inline--fa fa-trash mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>Clear Filter</button></div></div></div></header><div class="card-body"><div class=" mb-3"><div class="row"><div class="col-md-3"><select class="form-control" id="semester"><option value="">Select Semester</option><option value="69ce7c4b59585fa0abf78858">SDT-08</option><option value="69ad78a0aab13265a929552c">ai-ml-batch2-1</option><option value="69ad77a36404671a50b4bdca">batch9-1</option><option value="69ad77a36404671a50b4bdcb">batch9-2</option><option value="698f0c4ceda2dc35fbb4d950">XPSC-08</option><option value="6909ee74236fe737dd1a3378">ACC - 6</option><option value="68e154a3ae25a94226151d6c">SDT-07</option><option value="68dfb342875f7fcc52dff5f4">XPSC-07</option><option value="68bfc52b42237a90f10c1805">batch8-2</option><option value="68bfc52b42237a90f10c1804">batch8-1</option><option value="68be7800f95271f681ed773c">ai-ml-batch1-1</option><option value="68b894a93d72290f097a8bec">test-ai-ml-batch1-1</option><option value="683e8d9f58f6fcc70b347467">ACC - 5</option><option value="67df1666e4e7aa8ae0a39da6">XPSC</option><option value="67df03b641638bd0773d4455">SDT-06</option><option value="67c436b23ef30ab6c386828b">batch7-1</option><option value="67c436b23ef30ab6c386828c">batch7-2</option><option value="67c436b23ef30ab6c386828d">batch7-3</option><option value="679705f1e485d76e8a7cf996">CSB-02</option><option value="671b2cc230a3d908f2c810b6">XPSC-05</option><option value="671b2c83a8c767ad06dd4097">SDT-05</option><option value="6715a07c43dcaee18ea77230">ACC - 4</option><option value="67065b2a5a2e2790784d5f7c">CSB-01</option><option value="66d6af44ca8efde0774342c0">batch6-1</option><option value="66d6af44ca8efde0774342c1">batch6-2</option><option value="66d6af44ca8efde0774342c2">batch6-3</option><option value="6692578a18a8842b3a171e73">ACC- ML03</option><option value="669257353e99b2eb6697b126">ACC-ML</option><option value="668b7fc70e9961322c8f00c9">ACC-1</option><option value="65ef1329d406b8634e2ebc80">XPSC-04</option><option value="65ef12a3d406b8634e2ebc28">SDT-04</option><option value="65ec1e7f814b282f65119ab7">batch5-1</option><option value="65ec1e7f814b282f65119ab8">batch5-2</option><option value="65ec1e7f814b282f65119ab9">batch5-3</option><option value="65df71890c61d015a7177a09">test-course-1</option><option value="65df71890c61d015a7177a0b">test-course-3</option><option value="65df71890c61d015a7177a0a">test-course-2</option><option value="64fc3fd53cbfa556d80d2a04">batch4-1</option><option value="64fc3fd53cbfa556d80d2a05">batch4-2</option><option value="64fc3fd53cbfa556d80d2a06">batch4-3</option><option value="64de67f35e9b64d9cb52978a">Ph-1-1</option><option value="64de67f35e9b64d9cb52978b">Ph-1-2</option><option value="64084557438a9907e0a057bc">batch3-1</option><option value="64084557438a9907e0a057bd">batch3-2</option><option value="64084557438a9907e0a057be">batch3-3</option><option value="631b44c719897afacb0a2f1e">batch2-1</option><option value="631b44c719897afacb0a2f1f">batch2-2</option><option value="631b44c719897afacb0a2f20">batch2-3</option><option value="630e698b552a8c141a27da50">CRJ1-1</option><option value="630e698b552a8c141a27da51">CRJ1-2</option><option value="62a96c5c1f4ec4f702693883">batch1-3</option><option value="62a96c5c1f4ec4f70269387d">batch1-2</option><option value="62a96c5c1f4ec4f702693877">batch1-1</option></select></div><div class="col-md-3"><select class="form-control" id="courseId"><option value="">Select a course</option><option value="68d6737369790a089e2487b6">ML011 (646)</option><option value="690dc550c4d79b435529cd0d">ML021 (1243)</option><option value="697dbc5a20a197682b494c36">ML031 (1171)</option></select></div><div class="col-md-3"><select class="form-control" id="courseId"><option value="">Select an Assignment</option><option value="6985f7af819dbfb795345bee">DL Assignment 01 (264)</option><option value="69931498f7570d8ae5993a2b">DL Assignment 02 (258)</option><option value="699ee32ac22d285c3c5dc797">DL Mid Term Exam (197)</option><option value="69a98ce118bc4e38c529f0aa">DL Assignment 03 (237)</option><option value="69d91e633731499db37e9c79">DL Final Exam (218)</option></select></div><div class="col-md-3"><input class="form-control" type="text" placeholder="Search..." name="search" value=""></div></div></div><div></div><div class="position-relative table-responsive"><table class="table table-sm table-hover"><thead><tr><th class="" style="vertical-align: middle; overflow: hidden;"><div class="d-inline"><input type="checkbox" id="thead-checkbox"></div></th><th class="" style="vertical-align: middle; overflow: hidden;"><div class="d-inline">Email</div></th><th class="" style="vertical-align: middle; overflow: hidden;"><div class="d-inline">Name</div></th><th class="" style="vertical-align: middle; overflow: hidden;"><div class="d-inline">Examiner</div></th><th class="" style="vertical-align: middle; overflow: hidden;"><div class="d-inline">Submission Date</div></th><th class="" style="vertical-align: middle; overflow: hidden;"><div class="d-inline">Dead Line</div></th><th class="" style="vertical-align: middle; overflow: hidden;"><div class="d-inline">Marks</div></th><th class="" style="vertical-align: middle; overflow: hidden;"><div class="d-inline">Action</div></th></tr></thead><tbody><tr class=""><td><input type="checkbox" class="select-checkbox" id="checked_id69da38059b50998c09c350d7" name="id" value="69da38059b50998c09c350d7"></td><td>tanjip.surait.mahdin@gmail.com</td><td>TANJIP SURAIT MAHDIN</td><td>Avishek Devnath</td><td>11-04-2026 06:01 PM</td><td>17-04-2026 11:59 PM</td><td>100/100</td><td class="py-2"><button class="btn btn-icon btn-eye-icon btn-danger ml-1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pencil" class="svg-inline--fa fa-pencil " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1 0 32c0 8.8 7.2 16 16 16l32 0zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg></button></td></tr><tr class=""><td><input type="checkbox" class="select-checkbox" id="checked_id69da42f24719e9152f9e29ed" name="id" value="69da42f24719e9152f9e29ed"></td><td>mdnaim2228@gmail.com</td><td>Md Naimul Islam</td><td>Avishek Devnath</td><td>11-04-2026 06:47 PM</td><td>17-04-2026 11:59 PM</td><td>100/100</td><td class="py-2"><button class="btn btn-icon btn-eye-icon btn-danger ml-1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pencil" class="svg-inline--fa fa-pencil " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1 0 32c0 8.8 7.2 16 16 16l32 0zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg></button></td></tr><tr class=""><td><input type="checkbox" class="select-checkbox" id="checked_id69db67e5206f46708b120184" name="id" value="69db67e5206f46708b120184"></td><td>mst.tahminajerinarju@gmail.com</td><td>Mst. Tahmina Jerin Arju</td><td>Avishek Devnath</td><td>12-04-2026 03:37 PM</td><td>17-04-2026 11:59 PM</td><td>100/100</td><td class="py-2"><button class="btn btn-icon btn-eye-icon btn-danger ml-1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pencil" class="svg-inline--fa fa-pencil " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1 0 32c0 8.8 7.2 16 16 16l32 0zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg></button></td></tr><tr class=""><td><input type="checkbox" class="select-checkbox" id="checked_id69db8749206f46708b127112" name="id" value="69db8749206f46708b127112"></td><td>ssultanaoishee@gmail.com</td><td>Shaiera Sultana Oishe</td><td>Avishek Devnath</td><td>12-04-2026 05:51 PM</td><td>17-04-2026 11:59 PM</td><td>100/100</td><td class="py-2"><button class="btn btn-icon btn-eye-icon btn-danger ml-1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pencil" class="svg-inline--fa fa-pencil " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1 0 32c0 8.8 7.2 16 16 16l32 0zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg></button></td></tr><tr class=""><td><input type="checkbox" class="select-checkbox" id="checked_id69dba5dd2a9907c143ed9ec3" name="id" value="69dba5dd2a9907c143ed9ec3"></td><td>zasif855@gmail.com</td><td>A K M Asifuzzaman</td><td>Avishek Devnath</td><td>12-04-2026 08:02 PM</td><td>17-04-2026 11:59 PM</td><td>100/100</td><td class="py-2"><button class="btn btn-icon btn-eye-icon btn-danger ml-1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pencil" class="svg-inline--fa fa-pencil " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1 0 32c0 8.8 7.2 16 16 16l32 0zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg></button></td></tr><tr class=""><td><input type="checkbox" class="select-checkbox" id="checked_id69dbae871a6ca9397881a17b" name="id" value="69dbae871a6ca9397881a17b"></td><td>latif73.bou@bou.ac.bd</td><td>Raiyana Rufaida </td><td>Avishek Devnath</td><td>12-04-2026 08:39 PM</td><td>17-04-2026 11:59 PM</td><td>100/100</td><td class="py-2"><button class="btn btn-icon btn-eye-icon btn-danger ml-1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pencil" class="svg-inline--fa fa-pencil " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1 0 32c0 8.8 7.2 16 16 16l32 0zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg></button></td></tr><tr class=""><td><input type="checkbox" class="select-checkbox" id="checked_id69dbd100f35ad96fc099beb8" name="id" value="69dbd100f35ad96fc099beb8"></td><td>mdtanim0195@gmail.com</td><td>Md. Sahadat Hossen Tanim</td><td>Avishek Devnath</td><td>12-04-2026 11:06 PM</td><td>17-04-2026 11:59 PM</td><td>100/100</td><td class="py-2"><button class="btn btn-icon btn-eye-icon btn-danger ml-1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pencil" class="svg-inline--fa fa-pencil " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1 0 32c0 8.8 7.2 16 16 16l32 0zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg></button></td></tr><tr class=""><td><input type="checkbox" class="select-checkbox" id="checked_id69dbedda0609f13a4b078914" name="id" value="69dbedda0609f13a4b078914"></td><td>minhaj.aabedin@gmail.com</td><td>Minhajul Abedin</td><td>Avishek Devnath</td><td>13-04-2026 01:09 AM</td><td>17-04-2026 11:59 PM</td><td>100/100</td><td class="py-2"><button class="btn btn-icon btn-eye-icon btn-danger ml-1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pencil" class="svg-inline--fa fa-pencil " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1 0 32c0 8.8 7.2 16 16 16l32 0zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg></button></td></tr><tr class=""><td><input type="checkbox" class="select-checkbox" id="checked_id69dc45a36128e9f00d8b81d9" name="id" value="69dc45a36128e9f00d8b81d9"></td><td>haquewasiful2016@gmail.com</td><td>Wasiful Haque</td><td>Avishek Devnath</td><td>13-04-2026 07:23 AM</td><td>17-04-2026 11:59 PM</td><td>100/100</td><td class="py-2"><button class="btn btn-icon btn-eye-icon btn-danger ml-1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pencil" class="svg-inline--fa fa-pencil " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1 0 32c0 8.8 7.2 16 16 16l32 0zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg></button></td></tr><tr class=""><td><input type="checkbox" class="select-checkbox" id="checked_id69dc81652a9907c143f161b0" name="id" value="69dc81652a9907c143f161b0"></td><td>adittysonjoy@gmail.com</td><td>sonjoy chandra</td><td>Avishek Devnath</td><td>13-04-2026 11:38 AM</td><td>17-04-2026 11:59 PM</td><td>100/100</td><td class="py-2"><button class="btn btn-icon btn-eye-icon btn-danger ml-1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pencil" class="svg-inline--fa fa-pencil " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1 0 32c0 8.8 7.2 16 16 16l32 0zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg></button></td></tr></tbody></table></div><div class="d-flex justify-content-center"><div class="d-flex custom-pagination justify-content-center"><nav aria-label="pagination navigation" class="MuiPagination-root"><ul class="MuiPagination-ul"><li><button class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page MuiPaginationItem-outlined MuiPaginationItem-rounded Mui-disabled Mui-disabled" tabindex="-1" type="button" disabled="" aria-label="Go to previous page"><svg class="MuiSvgIcon-root MuiPaginationItem-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg></button></li><li><button class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page MuiPaginationItem-outlined MuiPaginationItem-rounded Mui-selected" tabindex="0" type="button" aria-current="true" aria-label="page 1">1<span class="MuiTouchRipple-root"></span></button></li><li><button class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page MuiPaginationItem-outlined MuiPaginationItem-rounded" tabindex="0" type="button" aria-label="Go to page 2">2<span class="MuiTouchRipple-root"></span></button></li><li><button class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page MuiPaginationItem-outlined MuiPaginationItem-rounded" tabindex="0" type="button" aria-label="Go to page 3">3<span class="MuiTouchRipple-root"></span></button></li><li><button class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page MuiPaginationItem-outlined MuiPaginationItem-rounded" tabindex="0" type="button" aria-label="Go to page 4">4<span class="MuiTouchRipple-root"></span></button></li><li><button class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page MuiPaginationItem-outlined MuiPaginationItem-rounded" tabindex="0" type="button" aria-label="Go to page 5">5<span class="MuiTouchRipple-root"></span></button></li><li><div class="MuiPaginationItem-root MuiPaginationItem-ellipsis">…</div></li><li><button class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page MuiPaginationItem-outlined MuiPaginationItem-rounded" tabindex="0" type="button" aria-label="Go to page 22">22<span class="MuiTouchRipple-root"></span></button></li><li><button class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page MuiPaginationItem-outlined MuiPaginationItem-rounded" tabindex="0" type="button" aria-label="Go to next page"><svg class="MuiSvgIcon-root MuiPaginationItem-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg><span class="MuiTouchRipple-root"></span></button></li></ul></nav></div></div></div></div><div class="Toastify"></div></div></div></div></div></div></div></div></main></div></div><footer class="c-footer"><div><a href="https://coreui.io" target="_blank" rel="noopener noreferrer">CoreUI</a><span class="ml-1">© 2020 creativeLabs.</span></div><div class="mfs-auto"><span class="mr-1">Powered by</span><a href="https://coreui.io/react" target="_blank" rel="noopener noreferrer">CoreUI for React</a></div></footer></div></div></div>
+    <div id="contact-root"></div>
+
+    <script src="https://dev.vdocipher.com/playerAssets/1.6.10/vdo.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-0R8MW5MZT2%22%3E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-0R8MW5MZT2");
+    </script>-->
+
+  
+
+<div class="c-sidebar-backdrop c-show" id="6aymgtkm8tfbackdrop"></div><div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; position: fixed; visibility: hidden; display: block; transition: right 0.3s; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-dfvjifpq42h5" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6Ld8JHsqAAAAAOy77PYioi_IcSSRkiIbZ8L7KZt-&amp;co=aHR0cHM6Ly9waGl0cm9uLmlvOjQ0Mw..&amp;hl=en&amp;v=gTpTIWhbKpxADzTzkcabhXN4&amp;size=invisible&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=s7mxchbpivv6"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div><div class="ReactModalPortal"><div class="ReactModal__Overlay ReactModal__Overlay--after-open" style="position: fixed; inset: 0px; background-color: rgba(255, 255, 255, 0.75);"><div class="ReactModal__Content ReactModal__Content--after-open" tabindex="-1" role="dialog" aria-label="Example Modal" aria-modal="true" style="position: absolute; inset: 50% auto auto 50%; border: 1px solid rgb(204, 204, 204); background: rgb(255, 255, 255); overflow: auto; border-radius: 4px; outline: none; padding: 20px; max-width: 750px; margin-right: -50%; transform: translate(-50%, -50%);"><div class="assignment-evaluation-form"><div><header class="d-flex justify-content-between align-items-center card-header"><strong>DL Final Exam</strong><button class="btn btn-close"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="cursor: pointer;"><path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path></svg></button></header><div class="card-body"><div class="row form-group"><div class="col-md-6"><div class="form-group"><div class="col-md-12"><label class="" for="fullname"><span class="label">Student Name</span></label></div><div class="col-12 col-md-11"><label class="">TANJIP SURAIT MAHDIN</label></div></div><div class="form-group"><div class="col-md-12"><label class="" for="hf-email"><span class="label">Phone</span></label></div><div class="col-12 col-md-11"><label class="">+8801639322453</label></div></div><div class="form-group"><div class="col-md-12"><label class="" for="phone"><span class="label">Email</span></label></div><div class="col-12 col-md-11"><label class="" style="max-width: 210px;">tanjip.surait.mahdin@gmail.com</label></div></div><div class="form-group"><div class="col-md-12"><label class="" for="role"><span class="label">Submission Date</span></label></div><div class="col-12 col-md-11"><label class="">11 Apr, 2026 06:01 PM</label></div><div class="col-md-12"><label class="" for="role"></label></div></div></div><div class="col-md-6"><div class="form-group"><div class="col-md-12"><label class="" for="role"><span class="label">CourseID</span></label></div><div class="col-12 col-md-11"><label class=""></label></div></div><div class="form-group border-left"><div class="col-md-12"><label class="" for="role"><span class="label">Deadline ( 1st )</span><span class="badge ml-2 p-1 px-2 bg-info text-white">100</span> </label></div><div class="col-12 col-md-11"><label class="">17 Apr, 2026 11:59 PM </label></div></div><div class="form-group"><div class="col-md-12"><label class="" for="role"><span class="label">Deadline ( 2nd )</span><span class="badge p-1 px-2 ml-2 bg-info text-white">90</span></label></div><div class="col-12 col-md-11"><label class="">19 Apr, 2026 11:59 PM </label></div></div><div class="form-group"><div class="col-md-12"><label class="" for="role"><span class="label">Resubmitted At</span></label></div><div class="col-12 col-md-11"><label class=""> NA</label></div></div></div></div><div class="row form-group"><div class="col-md-12"><div class="col-md-12"><label class="" for="role"><span class="label">Assignment's Data </span><button class="btn"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" class="svg-inline--fa fa-copy " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M208 0L332.1 0c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9L448 336c0 26.5-21.5 48-48 48l-192 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48zM48 128l80 0 0 64-64 0 0 256 192 0 0-32 64 0 0 48c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 176c0-26.5 21.5-48 48-48z"></path></svg></button></label></div><div class="col-12 col-md-11"><div><a href="https://colab.research.google.com/drive/1pSXoq3StOvEjea71IMMXc-nV_Re5t-WT?usp=sharing" target="_blank">https://colab.research.google.com/drive/1pSXoq3StOvEjea71IMMXc-nV_Re5t-WT?usp=sharing</a></div></div></div></div></div></div><div class="p-3 mx-4 mb-3 box-shadow"><header class="card-header"><strong>Mark History</strong></header><div class="card-body"><ul><li><p class="m-0"><strong>Examiner: </strong>Avishek Devnath</p><p class="m-0"><strong>Given Mark: </strong>100</p><p class="m-0"><strong>Date : </strong>22-04-2026 09:20 AM</p><div class="m-0"><strong>Feedback: </strong><div class="text-editor-format" style="cursor: pointer;"><div style="pointer-events: none;"><p><strong style="font-size:15px;">Examiner Feedback: </strong><span style="font-size:15px;">Excellent, you did very well. Hope you will keep excellent performances like this in the future and finish the course with your best. Best wishes to you!</span></p><p><br></p><p><strong style="font-size:15px"># Question - 1</strong></p><p><em class="ql-padding-2" style="font-size:15px;"> Explain the concept of backpropagation in detail. Describe how the error is propagated from the output layer to the hidden layers. Derive the mathematical expressions for weight updates using the chain rule, and explain how learning rate affects the training process.</em><strong class="ql-padding-1" style="font-size: 15px;"><em class="ql-padding-2"> → 10 / 10</em></strong></p><p><strong style="font-size:15px"># Question - 2</strong></p><p><em class="ql-padding-2" style="font-size:15px;"> Consider a neural network with one hidden layer using sigmoid activation. Derive the complete backpropagation equations for updating weights and biases. Show all steps clearly, including forward pass, loss calculation, and backward pass.</em><strong class="ql-padding-1" style="font-size: 15px;"><em class="ql-padding-2"> → 10 / 10</em></strong></p><p><strong style="font-size:15px"># Question - 3</strong></p><p><em class="ql-padding-2" style="font-size:15px;"> Discuss the vanishing gradient problems in deep neural networks. Explain why they occur during backpropagation, how activation functions contribute to this issue, and suggest at least three techniques to overcome these problems.</em><strong class="ql-padding-1" style="font-size: 15px;"><em class="ql-padding-2"> → 5 / 5</em></strong></p><p><strong style="font-size:15px"># Question - 4</strong></p><p><em class="ql-padding-2" style="font-size:15px;"> Describe the architecture of an Artificial Neural Network (ANN) in detail. Explain the role of each component (neurons, weights, bias, activation functions). Also discuss how increasing the number of hidden layers and neurons affects model performance and overfitting.</em><strong class="ql-padding-1" style="font-size: 15px;"><em class="ql-padding-2"> → 5 / 5</em></strong></p><p><strong style="font-size:15px"># Question - 5</strong></p><p><em class="ql-padding-2" style="font-size:15px;"> Compare Artificial Neural Networks (ANN) and Convolutional Neural Networks (CNN) in detail. Discuss their architectures, working principles, advantages, limitations, and typical use cases such as image processing, tabular data, and pattern recognition.</em><strong class="ql-padding-1" style="font-size: 15px;"><em class="ql-padding-2"> → 10 / 10</em></strong></p><p><strong style="font-size:15px"># Question - 6</strong></p><p><em class="ql-padding-2" style="font-size:15px;"> Explain different activation functions used in neural networks, including Sigmoid, Tanh, and ReLU. Provide their mathematical formulas, advantages, disadvantages, and suitable use cases. Also discuss why ReLU is widely used in deep learning.</em><strong class="ql-padding-1" style="font-size: 15px;"><em class="ql-padding-2"> → 10 / 10</em></strong></p><p><strong style="font-size:15px"># Question - 7</strong></p><p><em class="ql-padding-2" style="font-size:15px;"> Describe the convolution operation in CNNs in detail. Explain how filters (kernels) work, how feature maps are generated, and how parameters like stride and padding affect the output. Provide a step-by-step example using a small input matrix.<br>Note :  You've to attach an image here.</em><strong class="ql-padding-1" style="font-size: 15px;"><em class="ql-padding-2"> → 10 / 10</em></strong></p><p><strong style="font-size:15px"># Question - 8</strong></p><p><em class="ql-padding-2" style="font-size:15px;"> Explain the concept of pooling in CNNs. Compare MaxPooling and AveragePooling in terms of operation, advantages, and impact on feature extraction. Discuss how pooling helps in reducing overfitting and computational complexity.</em><strong class="ql-padding-1" style="font-size: 15px;"><em class="ql-padding-2"> → 10 / 10</em></strong></p><p><strong style="font-size:15px"># Question - 9</strong></p><p><em class="ql-padding-2" style="font-size:15px;"> Given an input image of size 128×128×3, explain step-by-step how the dimensions change after multiple convolution and pooling layers. Clearly show calculations for output size after each layer using appropriate formulas.</em><strong class="ql-padding-1" style="font-size: 15px;"><em class="ql-padding-2"> → 10 / 10</em></strong></p><p><strong style="font-size:15px"># Question - 10</strong></p><p><em class="ql-padding-2" style="font-size:15px;"> Design and implement a deep Convolutional Neural Network (CNN) for a multi-class image classification problem using PyTorch. The network should consist of four convolutional blocks, where each block includes two convolution layers followed by activation and normalization, and a pooling layer at the end. The number of filters should increase progressively across blocks. After the convolutional part, flatten the feature maps and connect them to fully connected layers with dropout for regularization, and produce final outputs corresponding to K classes. Also explain the role of each part of the network in detail.</em><strong class="ql-padding-1" style="font-size: 15px;"><em class="ql-padding-2"> → 20 / 20</em></strong></p><p><br></p><p><strong style="font-size:15px;">Important Instructions:</strong></p><p><span style="font-size:15px;"> → Do not post on Facebook, if you have any marks-related issues.</span></p><p><span style="font-size:15px;"> → Make sure to read all the requirements carefully, If you have any marks-related confusion.</span></p><p><span style="font-size:15px;"> → If you are confident and If there is a mistake from the examiner's end, give a recheck request.</span></p><p><span style="font-size:15px;"> → If your recheck reason was not valid, 2 marks will be deducted from your current marks.</span></p><p><span style="font-size:15px;"> → Please check the documentation below for more information about how to recheck.</span></p><p><br></p><p><strong style="font-size:15px;color:red;">We have a recheck option, so please refrain from posting to the group.</strong></p><p><em style="font-size:15px;color:green;">If your recheck reason is valid you will get marks, if not valid 2 marks will be deducted.</em></p></div></div></div><p><strong></strong></p></li></ul></div></div><div class="p-3 mx-4 box-shadow mb-3"><header class="card-header"><strong>Recheck Reason</strong></header><div class="card-body"><ul></ul></div></div><div class="feedback-box p-3 mx-4 box-shadow"><div class="container cantdupli" id="load-feedback"><p class="m-0 p-0" style="font-weight: 600;">Approximate Marks: 100 / 100</p><div class="row p-2"><h4 class="w-100 bg-dark text-light pl-1">Question-1</h4><div class="card-body border my-1 d-flex flex-wrap w-100"><div class="w-100"><div class="d-flex" style="font-size: 14px;"><div class="flex-grow-1" style="width: 90%;">Explain the concept of backpropagation in detail. Describe how the error is propagated from the output layer to the hidden layers. Derive the mathematical expressions for weight updates using the chain rule, and explain how learning rate affects the training process.</div><div class="d-flex my-1 align-items-center"><input class="form-check-input" type="checkbox" data-checkbox="correct-btn_69e5f9785deb278878d067c3" checked="" style="transform: scale(1.3);"><span class="mr-3"></span><span style="min-width: max-content;">10</span></div></div></div></div></div><div class="row p-2"><h4 class="w-100 bg-dark text-light pl-1">Question-2</h4><div class="card-body border my-1 d-flex flex-wrap w-100"><div class="w-100"><div class="d-flex" style="font-size: 14px;"><div class="flex-grow-1" style="width: 90%;">Consider a neural network with one hidden layer using sigmoid activation. Derive the complete backpropagation equations for updating weights and biases. Show all steps clearly, including forward pass, loss calculation, and backward pass.</div><div class="d-flex my-1 align-items-center"><input class="form-check-input" type="checkbox" data-checkbox="correct-btn_69e5f9785deb278878d067c4" checked="" style="transform: scale(1.3);"><span class="mr-3"></span><span style="min-width: max-content;">10</span></div></div></div></div></div><div class="row p-2"><h4 class="w-100 bg-dark text-light pl-1">Question-3</h4><div class="card-body border my-1 d-flex flex-wrap w-100"><div class="w-100"><div class="d-flex" style="font-size: 14px;"><div class="flex-grow-1" style="width: 90%;">Discuss the vanishing gradient problems in deep neural networks. Explain why they occur during backpropagation, how activation functions contribute to this issue, and suggest at least three techniques to overcome these problems.</div><div class="d-flex my-1 align-items-center"><input class="form-check-input" type="checkbox" data-checkbox="correct-btn_69e5f9785deb278878d067c5" checked="" style="transform: scale(1.3);"><span class="mr-3"></span><span style="min-width: max-content;">5</span></div></div></div></div></div><div class="row p-2"><h4 class="w-100 bg-dark text-light pl-1">Question-4</h4><div class="card-body border my-1 d-flex flex-wrap w-100"><div class="w-100"><div class="d-flex" style="font-size: 14px;"><div class="flex-grow-1" style="width: 90%;">Describe the architecture of an Artificial Neural Network (ANN) in detail. Explain the role of each component (neurons, weights, bias, activation functions). Also discuss how increasing the number of hidden layers and neurons affects model performance and overfitting.</div><div class="d-flex my-1 align-items-center"><input class="form-check-input" type="checkbox" data-checkbox="correct-btn_69e5f9785deb278878d067c6" checked="" style="transform: scale(1.3);"><span class="mr-3"></span><span style="min-width: max-content;">5</span></div></div></div></div></div><div class="row p-2"><h4 class="w-100 bg-dark text-light pl-1">Question-5</h4><div class="card-body border my-1 d-flex flex-wrap w-100"><div class="w-100"><div class="d-flex" style="font-size: 14px;"><div class="flex-grow-1" style="width: 90%;">Compare Artificial Neural Networks (ANN) and Convolutional Neural Networks (CNN) in detail. Discuss their architectures, working principles, advantages, limitations, and typical use cases such as image processing, tabular data, and pattern recognition.</div><div class="d-flex my-1 align-items-center"><input class="form-check-input" type="checkbox" data-checkbox="correct-btn_69e5f9785deb278878d067c7" checked="" style="transform: scale(1.3);"><span class="mr-3"></span><span style="min-width: max-content;">10</span></div></div></div></div></div><div class="row p-2"><h4 class="w-100 bg-dark text-light pl-1">Question-6</h4><div class="card-body border my-1 d-flex flex-wrap w-100"><div class="w-100"><div class="d-flex" style="font-size: 14px;"><div class="flex-grow-1" style="width: 90%;">Explain different activation functions used in neural networks, including Sigmoid, Tanh, and ReLU. Provide their mathematical formulas, advantages, disadvantages, and suitable use cases. Also discuss why ReLU is widely used in deep learning.</div><div class="d-flex my-1 align-items-center"><input class="form-check-input" type="checkbox" data-checkbox="correct-btn_69e5f9785deb278878d067c8" checked="" style="transform: scale(1.3);"><span class="mr-3"></span><span style="min-width: max-content;">10</span></div></div></div></div></div><div class="row p-2"><h4 class="w-100 bg-dark text-light pl-1">Question-7</h4><div class="card-body border my-1 d-flex flex-wrap w-100"><div class="w-100"><div class="d-flex" style="font-size: 14px;"><div class="flex-grow-1" style="width: 90%;">Describe the convolution operation in CNNs in detail. Explain how filters (kernels) work, how feature maps are generated, and how parameters like stride and padding affect the output. Provide a step-by-step example using a small input matrix.
+Note :  You've to attach an image here.</div><div class="d-flex my-1 align-items-center"><input class="form-check-input" type="checkbox" data-checkbox="correct-btn_69e5f9785deb278878d067c9" checked="" style="transform: scale(1.3);"><span class="mr-3"></span><span style="min-width: max-content;">10</span></div></div></div></div></div><div class="row p-2"><h4 class="w-100 bg-dark text-light pl-1">Question-8</h4><div class="card-body border my-1 d-flex flex-wrap w-100"><div class="w-100"><div class="d-flex" style="font-size: 14px;"><div class="flex-grow-1" style="width: 90%;">Explain the concept of pooling in CNNs. Compare MaxPooling and AveragePooling in terms of operation, advantages, and impact on feature extraction. Discuss how pooling helps in reducing overfitting and computational complexity.</div><div class="d-flex my-1 align-items-center"><input class="form-check-input" type="checkbox" data-checkbox="correct-btn_69e5f9785deb278878d067ca" checked="" style="transform: scale(1.3);"><span class="mr-3"></span><span style="min-width: max-content;">10</span></div></div></div></div></div><div class="row p-2"><h4 class="w-100 bg-dark text-light pl-1">Question-9</h4><div class="card-body border my-1 d-flex flex-wrap w-100"><div class="w-100"><div class="d-flex" style="font-size: 14px;"><div class="flex-grow-1" style="width: 90%;">Given an input image of size 128×128×3, explain step-by-step how the dimensions change after multiple convolution and pooling layers. Clearly show calculations for output size after each layer using appropriate formulas.</div><div class="d-flex my-1 align-items-center"><input class="form-check-input" type="checkbox" data-checkbox="correct-btn_69e5f9785deb278878d067cb" checked="" style="transform: scale(1.3);"><span class="mr-3"></span><span style="min-width: max-content;">10</span></div></div></div></div></div><div class="row p-2"><h4 class="w-100 bg-dark text-light pl-1">Question-10</h4><div class="card-body border my-1 d-flex flex-wrap w-100"><div class="w-100"><div class="d-flex" style="font-size: 14px;"><div class="flex-grow-1" style="width: 90%;">Design and implement a deep Convolutional Neural Network (CNN) for a multi-class image classification problem using PyTorch. The network should consist of four convolutional blocks, where each block includes two convolution layers followed by activation and normalization, and a pooling layer at the end. The number of filters should increase progressively across blocks. After the convolutional part, flatten the feature maps and connect them to fully connected layers with dropout for regularization, and produce final outputs corresponding to K classes. Also explain the role of each part of the network in detail.</div><div class="d-flex my-1 align-items-center"><input class="form-check-input" type="checkbox" data-checkbox="correct-btn_69e5f9785deb278878d067cc" checked="" style="transform: scale(1.3);"><span class="mr-3"></span><span style="min-width: max-content;">20</span></div></div></div></div></div><button class="btn btn-info w-100 mx-auto">Insert</button></div><form action="" method="post" class="form-horizontal py-3"><div class="row form-group"><div class="col-md-12"><div class="col-md-12"><label class="" for="Mark"><p>Give Mark </p></label></div><div class="d-flex align-items-center col-12 col-md-6"><input class="form-control" type="number" id="Mark" name="obtainMark" max="100" min="0" placeholder="Obtained Mark" value="100"><span style="width: 100px; margin-left: 10px;">out of</span><span class="font-weight-bold pl-2" style="width: 70px; word-break: keep-all;">100</span><button class="btn ml-2 btn-success btn-sm"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"></path></svg></button></div></div></div><div class="row form-group"><div class="col-md-12"><div class="col-md-12"><label class="" for="Feedback"><p class="mt-3">Feedback</p></label></div><div class="text-editor-format col-12 col-md-12"><div><div role="toolbar" class="ql-toolbar ql-snow"><span class="ql-formats"><span class="ql-header ql-picker"><span class="ql-picker-label" tabindex="0" role="button" aria-expanded="false" aria-controls="ql-picker-options-0"><svg viewBox="0 0 18 18"><polygon class="ql-stroke" points="7 11 9 13 11 11 7 11"></polygon><polygon class="ql-stroke" points="7 7 9 5 11 7 7 7"></polygon></svg></span><span class="ql-picker-options" aria-hidden="true" tabindex="-1" id="ql-picker-options-0"><span tabindex="0" role="button" class="ql-picker-item" data-value="1"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="2"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="3"></span><span tabindex="0" role="button" class="ql-picker-item"></span></span></span><select class="ql-header" style="display: none;"><option value="1"></option><option value="2"></option><option value="3"></option><option selected="selected"></option></select></span><span class="ql-formats"><button type="button" class="ql-bold" aria-pressed="false" aria-label="bold"><svg viewBox="0 0 18 18"><path class="ql-stroke" d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z"></path><path class="ql-stroke" d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z"></path></svg></button><button type="button" class="ql-italic" aria-pressed="false" aria-label="italic"><svg viewBox="0 0 18 18"><line class="ql-stroke" x1="7" x2="13" y1="4" y2="4"></line><line class="ql-stroke" x1="5" x2="11" y1="14" y2="14"></line><line class="ql-stroke" x1="8" x2="10" y1="14" y2="4"></line></svg></button><button type="button" class="ql-underline" aria-pressed="false" aria-label="underline"><svg viewBox="0 0 18 18"><path class="ql-stroke" d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3"></path><rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="12" x="3" y="15"></rect></svg></button><button type="button" class="ql-link" aria-pressed="false" aria-label="link"><svg viewBox="0 0 18 18"><line class="ql-stroke" x1="7" x2="11" y1="7" y2="11"></line><path class="ql-even ql-stroke" d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z"></path><path class="ql-even ql-stroke" d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z"></path></svg></button></span><span class="ql-formats"><button type="button" class="ql-list" aria-pressed="false" value="ordered" aria-label="list: ordered"><svg viewBox="0 0 18 18"><line class="ql-stroke" x1="7" x2="15" y1="4" y2="4"></line><line class="ql-stroke" x1="7" x2="15" y1="9" y2="9"></line><line class="ql-stroke" x1="7" x2="15" y1="14" y2="14"></line><line class="ql-stroke ql-thin" x1="2.5" x2="4.5" y1="5.5" y2="5.5"></line><path class="ql-fill" d="M3.5,6A0.5,0.5,0,0,1,3,5.5V3.085l-0.276.138A0.5,0.5,0,0,1,2.053,3c-0.124-.247-0.023-0.324.224-0.447l1-.5A0.5,0.5,0,0,1,4,2.5v3A0.5,0.5,0,0,1,3.5,6Z"></path><path class="ql-stroke ql-thin" d="M4.5,10.5h-2c0-.234,1.85-1.076,1.85-2.234A0.959,0.959,0,0,0,2.5,8.156"></path><path class="ql-stroke ql-thin" d="M2.5,14.846a0.959,0.959,0,0,0,1.85-.109A0.7,0.7,0,0,0,3.75,14a0.688,0.688,0,0,0,.6-0.736,0.959,0.959,0,0,0-1.85-.109"></path></svg></button><button type="button" class="ql-list" aria-pressed="false" value="bullet" aria-label="list: bullet"><svg viewBox="0 0 18 18"><line class="ql-stroke" x1="6" x2="15" y1="4" y2="4"></line><line class="ql-stroke" x1="6" x2="15" y1="9" y2="9"></line><line class="ql-stroke" x1="6" x2="15" y1="14" y2="14"></line><line class="ql-stroke" x1="3" x2="3" y1="4" y2="4"></line><line class="ql-stroke" x1="3" x2="3" y1="9" y2="9"></line><line class="ql-stroke" x1="3" x2="3" y1="14" y2="14"></line></svg></button></span><span class="ql-formats"><button type="button" class="ql-clean" aria-pressed="false" aria-label="clean"><svg class="" viewBox="0 0 18 18"><line class="ql-stroke" x1="5" x2="13" y1="3" y2="3"></line><line class="ql-stroke" x1="6" x2="9.35" y1="12" y2="3"></line><line class="ql-stroke" x1="11" x2="15" y1="11" y2="15"></line><line class="ql-stroke" x1="15" x2="11" y1="11" y2="15"></line><rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="7" x="2" y="14"></rect></svg></button></span></div><div class="ql-container ql-snow"><div class="ql-editor" contenteditable="true"><p><strong style="font-size: 15px;">Examiner Feedback: </strong><span style="font-size: 15px;">Excellent, you did very well. Hope you will keep excellent performances like this in the future and finish the course with your best. Best wishes to you!</span></p><p><br></p><p><strong style="font-size: 15px;"># Question - 1</strong></p><p><em style="font-size: 15px;"> Explain the concept of backpropagation in detail. Describe how the error is propagated from the output layer to the hidden layers. Derive the mathematical expressions for weight updates using the chain rule, and explain how learning rate affects the training process.</em><strong style="font-size: 15px;"><em> → 10 / 10</em></strong></p><p><strong style="font-size: 15px;"># Question - 2</strong></p><p><em style="font-size: 15px;"> Consider a neural network with one hidden layer using sigmoid activation. Derive the complete backpropagation equations for updating weights and biases. Show all steps clearly, including forward pass, loss calculation, and backward pass.</em><strong style="font-size: 15px;"><em> → 10 / 10</em></strong></p><p><strong style="font-size: 15px;"># Question - 3</strong></p><p><em style="font-size: 15px;"> Discuss the vanishing gradient problems in deep neural networks. Explain why they occur during backpropagation, how activation functions contribute to this issue, and suggest at least three techniques to overcome these problems.</em><strong style="font-size: 15px;"><em> → 5 / 5</em></strong></p><p><strong style="font-size: 15px;"># Question - 4</strong></p><p><em style="font-size: 15px;"> Describe the architecture of an Artificial Neural Network (ANN) in detail. Explain the role of each component (neurons, weights, bias, activation functions). Also discuss how increasing the number of hidden layers and neurons affects model performance and overfitting.</em><strong style="font-size: 15px;"><em> → 5 / 5</em></strong></p><p><strong style="font-size: 15px;"># Question - 5</strong></p><p><em style="font-size: 15px;"> Compare Artificial Neural Networks (ANN) and Convolutional Neural Networks (CNN) in detail. Discuss their architectures, working principles, advantages, limitations, and typical use cases such as image processing, tabular data, and pattern recognition.</em><strong style="font-size: 15px;"><em> → 10 / 10</em></strong></p><p><strong style="font-size: 15px;"># Question - 6</strong></p><p><em style="font-size: 15px;"> Explain different activation functions used in neural networks, including Sigmoid, Tanh, and ReLU. Provide their mathematical formulas, advantages, disadvantages, and suitable use cases. Also discuss why ReLU is widely used in deep learning.</em><strong style="font-size: 15px;"><em> → 10 / 10</em></strong></p><p><strong style="font-size: 15px;"># Question - 7</strong></p><p><em style="font-size: 15px;"> Describe the convolution operation in CNNs in detail. Explain how filters (kernels) work, how feature maps are generated, and how parameters like stride and padding affect the output. Provide a step-by-step example using a small input matrix.</em></p><p><em style="font-size: 15px;">Note : You've to attach an image here.</em><strong style="font-size: 15px;"><em> → 10 / 10</em></strong></p><p><strong style="font-size: 15px;"># Question - 8</strong></p><p><em style="font-size: 15px;"> Explain the concept of pooling in CNNs. Compare MaxPooling and AveragePooling in terms of operation, advantages, and impact on feature extraction. Discuss how pooling helps in reducing overfitting and computational complexity.</em><strong style="font-size: 15px;"><em> → 10 / 10</em></strong></p><p><strong style="font-size: 15px;"># Question - 9</strong></p><p><em style="font-size: 15px;"> Given an input image of size 128×128×3, explain step-by-step how the dimensions change after multiple convolution and pooling layers. Clearly show calculations for output size after each layer using appropriate formulas.</em><strong style="font-size: 15px;"><em> → 10 / 10</em></strong></p><p><strong style="font-size: 15px;"># Question - 10</strong></p><p><em style="font-size: 15px;"> Design and implement a deep Convolutional Neural Network (CNN) for a multi-class image classification problem using PyTorch. The network should consist of four convolutional blocks, where each block includes two convolution layers followed by activation and normalization, and a pooling layer at the end. The number of filters should increase progressively across blocks. After the convolutional part, flatten the feature maps and connect them to fully connected layers with dropout for regularization, and produce final outputs corresponding to K classes. Also explain the role of each part of the network in detail.</em><strong style="font-size: 15px;"><em> → 20 / 20</em></strong></p><p><br></p><p><strong style="font-size: 15px;">Important Instructions:</strong></p><p><span style="font-size: 15px;"> → Do not post on Facebook, if you have any marks-related issues.</span></p><p><span style="font-size: 15px;"> → Make sure to read all the requirements carefully, If you have any marks-related confusion.</span></p><p><span style="font-size: 15px;"> → If you are confident and If there is a mistake from the examiner's end, give a recheck request.</span></p><p><span style="font-size: 15px;"> → If your recheck reason was not valid, 2 marks will be deducted from your current marks.</span></p><p><span style="font-size: 15px;"> → Please check the documentation below for more information about how to recheck.</span></p><p><br></p><p><strong style="color: red; font-size: 15px;">We have a recheck option, so please refrain from posting to the group.</strong></p><p><em style="color: green; font-size: 15px;">If your recheck reason is valid you will get marks, if not valid 2 marks will be deducted.</em></p></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div></div></div></div></div><div class="row form-group"><div class="col-md-12"><div class="col-md-12"><label class="" for="Feedback"><p>Update Reason</p></label></div><div class="col-12 col-md-12"><textarea class="form-control" name="reason" id="reason"></textarea></div></div></div><div class="form-group col"><button class="btn px-4 btn-primary">Update mark</button></div></form></div></div></div></div></div><div data-react-modal-body-trap="" tabindex="0" style="position: absolute; opacity: 0;"></div></body></html>
