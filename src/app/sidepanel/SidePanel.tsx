@@ -544,12 +544,26 @@ export default function SidePanel() {
       }
 
       const segmenterModel = 'gpt-4o-mini'
-      const detectedMappings = await segmentNotebook(
-        extractedCells,
-        submissionInfo,
-        settings.apiKey,
-        segmenterModel
-      )
+      const modalQs = submissionInfo?.questionsFromModal || []
+
+      // Stage 1A: Anchor detection — deterministic, no AI
+      const { mappings: anchorMappings, unresolvedNumbers } = anchorDetectMappings(extractedCells, modalQs)
+
+      // Stage 1B: Segmenter only for questions anchor detection couldn't resolve
+      let segmenterMappings: QuestionMapping[] = []
+      if (unresolvedNumbers.length > 0) {
+        setProgress(`Mapping ${unresolvedNumbers.length} unresolved question(s) via AI segmenter...`)
+        segmenterMappings = await segmentNotebook(
+          extractedCells,
+          submissionInfo,
+          settings.apiKey,
+          segmenterModel,
+          unresolvedNumbers
+        )
+      }
+
+      const detectedMappings = [...anchorMappings, ...segmenterMappings]
+        .sort((a, b) => parseInt(a.number) - parseInt(b.number))
 
       console.group('%c[SidePanel] Segmenter Result', 'background: #6610f2; color: white; padding: 2px 8px; border-radius: 3px;')
       console.table(detectedMappings.map(m => ({
@@ -848,6 +862,107 @@ async function callOpenAI(
   return JSON.parse(match[0])
 }
 
+const ANCHOR_STOPWORDS = new Set([
+  'with', 'from', 'that', 'this', 'have', 'will', 'your', 'each', 'then',
+  'using', 'which', 'where', 'there', 'their', 'when', 'what', 'show',
+  'display', 'print', 'create', 'make', 'write', 'find', 'data', 'should',
+])
+
+function extractKeywords(text: string): string[] {
+  return text.toLowerCase().split(/\W+/).filter(w => w.length > 4 && !ANCHOR_STOPWORDS.has(w))
+}
+
+function scoreCellAgainstKeywords(cell: ExtractedCell, keywords: string[]): number {
+  if (!keywords.length) return 0
+  const cellText = cell.text.toLowerCase()
+  const matches = keywords.filter(kw => cellText.includes(kw)).length
+  return matches / keywords.length
+}
+
+/**
+ * Anchor detection: find prompt cells via modal question text keyword matching,
+ * then gap-fill answer cells between consecutive anchors. Deterministic — no AI.
+ */
+function anchorDetectMappings(
+  cells: ExtractedCell[],
+  modalQs: Array<{ number: string; maxMarks: number; prompt?: string }>
+): { mappings: QuestionMapping[]; unresolvedNumbers: string[] } {
+  const questionsWithPrompt = modalQs.filter(q => q.prompt && q.prompt.trim().length > 10)
+  if (questionsWithPrompt.length === 0) {
+    return { mappings: [], unresolvedNumbers: modalQs.map(q => String(q.number)) }
+  }
+
+  const textCells = cells.filter(c => c.type === 'text' && !c.isEmpty)
+  const allNonEmpty = cells.filter(c => !c.isEmpty)
+
+  // Find best prompt cell for each question
+  const resolved: Array<{ number: string; maxMarks: number; promptCellIdx: number; score: number }> = []
+  const unresolvedNumbers: string[] = []
+
+  for (const q of questionsWithPrompt) {
+    const keywords = extractKeywords(q.prompt || '')
+    if (keywords.length === 0) { unresolvedNumbers.push(String(q.number)); continue }
+
+    // Score text cells first (question prompts usually in markdown cells)
+    let bestCell: ExtractedCell | null = null
+    let bestScore = 0
+
+    for (const cell of textCells) {
+      const score = scoreCellAgainstKeywords(cell, keywords)
+      if (score > bestScore) { bestScore = score; bestCell = cell }
+    }
+
+    // Fall back to code cells if no text cell qualifies
+    if ((!bestCell || bestScore < 0.25) && keywords.length >= 2) {
+      for (const cell of allNonEmpty.filter(c => c.type !== 'text')) {
+        const score = scoreCellAgainstKeywords(cell, keywords)
+        if (score > bestScore) { bestScore = score; bestCell = cell }
+      }
+    }
+
+    const MATCH_THRESHOLD = keywords.length >= 4 ? 0.25 : 0.35
+    if (bestCell && bestScore >= MATCH_THRESHOLD) {
+      resolved.push({ number: String(q.number), maxMarks: q.maxMarks, promptCellIdx: bestCell.index, score: bestScore })
+      console.log(`[Anchor] Q${q.number} matched cell ${bestCell.index} (score: ${bestScore.toFixed(2)})`)
+    } else {
+      unresolvedNumbers.push(String(q.number))
+      console.log(`[Anchor] Q${q.number} no match (best score: ${bestScore.toFixed(2)}) → segmenter`)
+    }
+  }
+
+  // Add questions without prompts as unresolved
+  for (const q of modalQs.filter(q => !q.prompt || q.prompt.trim().length <= 10)) {
+    unresolvedNumbers.push(String(q.number))
+  }
+
+  if (resolved.length === 0) return { mappings: [], unresolvedNumbers }
+
+  // Sort resolved by prompt cell index (notebook order)
+  resolved.sort((a, b) => a.promptCellIdx - b.promptCellIdx)
+
+  // Gap fill: assign answer cells between consecutive prompt anchors
+  const mappings: QuestionMapping[] = resolved.map((q, i) => {
+    const nextPromptIdx = resolved[i + 1]?.promptCellIdx ?? Infinity
+    const answerCells = cells.filter(c =>
+      c.index > q.promptCellIdx &&
+      c.index < nextPromptIdx &&
+      !c.isEmpty
+    )
+    return {
+      number: q.number,
+      title: modalQs.find(mq => String(mq.number) === q.number)?.prompt?.slice(0, 80) || `Question ${q.number}`,
+      promptCellIndexes: [q.promptCellIdx],
+      answerCellIndexes: answerCells.map(c => c.index),
+      hasAnswer: answerCells.length > 0,
+      reason: answerCells.length === 0 ? 'No answer cells found between anchors' : undefined,
+      prompt: modalQs.find(mq => String(mq.number) === q.number)?.prompt,
+    }
+  })
+
+  console.log(`[Anchor] Resolved ${resolved.length}/${modalQs.length} questions. Unresolved: [${unresolvedNumbers.join(', ')}] → segmenter`)
+  return { mappings, unresolvedNumbers }
+}
+
 /**
  * Build the canonical list of question numbers we expect to evaluate.
  * Modal data wins. Otherwise scan TEXT cells (not code) for numbered question
@@ -907,17 +1022,20 @@ async function segmentNotebook(
   cells: ExtractedCell[],
   submissionInfo: SubmissionInfo | null,
   apiKey: string,
-  model: string
+  model: string,
+  targetNumbers?: string[]
 ): Promise<QuestionMapping[]> {
-  const cellSummary = cells.map(c => ({
-    idx: c.index,
-    type: c.type,
-    isEmpty: c.isEmpty,
-    text: (c.text || '').slice(0, 600),
-  }))
+  const cellSummary = cells
+    .filter(c => !c.isEmpty)
+    .map(c => ({
+      idx: c.index,
+      type: c.type,
+      isEmpty: c.isEmpty,
+      text: (c.text || '').slice(0, 600),
+    }))
 
   const modalQs = submissionInfo?.questionsFromModal || []
-  const expectedNumbers = detectExpectedQuestions(cells, modalQs)
+  const expectedNumbers = targetNumbers ?? detectExpectedQuestions(cells, modalQs)
   const expectedList = expectedNumbers.length > 0 ? `[${expectedNumbers.join(', ')}]` : '[detect from cells]'
 
   // Build per-question rubric hint when modal supplied marks
@@ -1402,21 +1520,23 @@ async function evaluateBatched(
       }
     }
 
-    const maxMarks = officialMax ?? Number(r.maxMarks) ?? 10
-    const awarded = Math.min(maxMarks, Math.max(0, Number(r.awardedMarks) || 0))
+    const rawMax = officialMax ?? Number(r.maxMarks)
+    if (!rawMax) console.warn(`[Evaluator] Q${m.number}: maxMarks missing from modal and AI response, defaulting to 10`)
+    const maxMarks = rawMax || 10
+    const awarded = Math.min(maxMarks, Math.max(0, Number(r.awardedMarks) ?? 0))
     return {
       questionId: `q-${m.number}`,
       questionNumber: m.number,
       awardedMarks: awarded,
       maxMarks,
-      summary: r.summary || '',
-      strengths: r.strengths || [],
-      mistakes: r.mistakes || [],
-      suggestions: r.suggestions || [],
-      rubricAlignment: r.rubricAlignment || '',
+      summary: r.summary ?? '',
+      strengths: r.strengths ?? [],
+      mistakes: r.mistakes ?? [],
+      suggestions: r.suggestions ?? [],
+      rubricAlignment: r.rubricAlignment ?? '',
       aiCopyPercentage: r.aiCopyPercentage ?? 0,
-      confidence: r.confidence || 'medium',
-      status: r.status || (awarded === maxMarks ? 'complete' : awarded > 0 ? 'partial' : 'skipped'),
+      confidence: r.confidence ?? 'medium',
+      status: r.status ?? (awarded === maxMarks ? 'complete' : awarded > 0 ? 'partial' : 'skipped'),
     }
   })
 
