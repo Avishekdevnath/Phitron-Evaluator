@@ -130,31 +130,33 @@ async function materializeAndSnapshotCells(): Promise<ExtractedCell[]> {
   let lastHeight = 0
   for (let i = 0; i < 5; i++) {
     scroller.scrollTo({ top: scroller.scrollHeight })
-    await sleep(250)
+    await sleep(100)
     if (scroller.scrollHeight === lastHeight) break
     lastHeight = scroller.scrollHeight
   }
 
   // Phase 2: stepwise top-to-bottom; snapshot at every step
   scroller.scrollTo({ top: 0 })
-  await sleep(200)
+  await sleep(80)
   extractColabCells(acc)
 
   const step = Math.max(600, Math.floor(scroller.clientHeight * 0.8))
   for (let pos = step; pos < scroller.scrollHeight; pos += step) {
     scroller.scrollTo({ top: pos })
-    await sleep(150)
+    await sleep(60)
     extractColabCells(acc)
+    // Early exit: if enough cells collected relative to expected count
+    if (acc.size >= 50) break
   }
 
   // Final pass: bottom + final snapshot
   scroller.scrollTo({ top: scroller.scrollHeight })
-  await sleep(200)
+  await sleep(80)
   extractColabCells(acc)
 
   // Restore original scroll
   scroller.scrollTo({ top: originalTop })
-  await sleep(100)
+  await sleep(50)
 
   // Reindex by insertion order so indexes are 0..N-1 contiguous
   const cells = Array.from(acc.values()).map((c, i) => ({ ...c, index: i }))

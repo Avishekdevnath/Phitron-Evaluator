@@ -27,6 +27,7 @@ interface QuestionMapping {
   answerCellIndexes: number[]
   hasAnswer: boolean
   reason?: string
+  prompt?: string
 }
 
 type EvalMode = 'single' | 'adaptive'
@@ -990,13 +991,15 @@ Rules (strict):
     if (missing.length > 0) {
       console.warn(`[Segmenter] Missing from AI output, adding synthetic: ${missing.join(', ')}`)
       missing.forEach(n => {
+        const modalQ = modalQs.find(mq => String(mq.number) === String(n))
         mappings.push({
           number: n,
-          title: '(missing — segmenter omitted)',
+          title: modalQ?.prompt?.slice(0, 80) || '(missing — segmenter omitted)',
           promptCellIndexes: [],
           answerCellIndexes: [],
           hasAnswer: false,
           reason: 'Segmenter did not return this question',
+          prompt: modalQ?.prompt,
         })
       })
     }
@@ -1296,7 +1299,31 @@ async function evaluateBatched(
   const answered = mappings.filter(m => m.hasAnswer && m.answerCellIndexes.length > 0)
   const skipped = mappings.filter(m => !m.hasAnswer || m.answerCellIndexes.length === 0)
 
-  const blocks = answered.map(m => {
+  // Recovery: split skipped into recoverable (has modal prompt) vs hard-skipped
+  const answeredCellSet = new Set(answered.flatMap(m => m.answerCellIndexes))
+  const unmappedCellIndexes = cells
+    .filter(c => !answeredCellSet.has(c.index))
+    .map(c => c.index)
+
+  const recoverable = skipped.filter(m => {
+    const numKey = String(m.number).replace(/^0+/, '')
+    return modalPromptMap.has(numKey) || !!m.prompt
+  })
+  const hardSkipped = skipped.filter(m => {
+    const numKey = String(m.number).replace(/^0+/, '')
+    return !modalPromptMap.has(numKey) && !m.prompt
+  })
+
+  // For recoverable questions: try evaluation with unmapped cells + modal prompt as context
+  const recoveryMappings = recoverable.map(m => ({
+    ...m,
+    answerCellIndexes: unmappedCellIndexes,
+    hasAnswer: unmappedCellIndexes.length > 0,
+  }))
+
+  const allAnswered = [...answered, ...recoveryMappings]
+
+  const blocks = allAnswered.map(m => {
     const numKey = String(m.number).replace(/^0+/, '')
     return {
       id: numKey,
@@ -1310,13 +1337,13 @@ async function evaluateBatched(
       : packBatches(blocks, MAX_BATCH_TOKENS)
 
   console.group(`%c[Evaluator] ${mode === 'single' ? 'Single' : 'Adaptive'} batching`, 'background: #0d6efd; color: white; padding: 2px 8px; border-radius: 3px;')
-  console.log(`Total Qs: ${mappings.length} (answered: ${answered.length}, skipped: ${skipped.length})`)
+  console.log(`Total Qs: ${mappings.length} (answered: ${allAnswered.length}, hard-skipped: ${hardSkipped.length}, recovered: ${recoveryMappings.length})`)
   console.log(`Batches: ${batches.length}`)
   batches.forEach((b, i) => console.log(`  Batch ${i + 1}: ${b.length} Qs, ~${b.reduce((s, x) => s + estimateTokens(x.text), 0)} tokens`))
   console.groupEnd()
 
   let completedQs = 0
-  const totalAnswered = answered.length
+  const totalAnswered = allAnswered.length
 
   const batchResults = await Promise.all(
     batches.map(async batch => {
@@ -1340,7 +1367,7 @@ async function evaluateBatched(
     const numKey = String(m.number).replace(/^0+/, '')
     const officialMax = modalMarksMap.get(numKey)
 
-    if (skipped.includes(m)) {
+    if (hardSkipped.includes(m)) {
       return {
         questionId: `q-${m.number}`,
         questionNumber: m.number,
