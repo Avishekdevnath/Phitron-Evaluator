@@ -9,8 +9,7 @@
     "activeTab",
     "tabs",
     "sidePanel",
-    "clipboardRead",
-    "downloads"
+    "clipboardRead"
   ],
   "action": {
     "default_title": "Phitron Evaluator"
