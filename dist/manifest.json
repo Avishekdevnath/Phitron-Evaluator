@@ -7,6 +7,7 @@
     "storage",
     "scripting",
     "activeTab",
+    "tabs",
     "sidePanel"
   ],
   "action": {
@@ -22,13 +23,15 @@
   "host_permissions": [
     "https://api.openai.com/*",
     "*://phitron.io/instructor-dashboard/my-assignment*",
-    "*://colab.research.google.com/*"
+    "*://colab.research.google.com/*",
+    "*://docs.google.com/*"
   ],
   "content_scripts": [
     {
       "matches": [
         "*://phitron.io/instructor-dashboard/my-assignment*",
-        "*://colab.research.google.com/*"
+        "*://colab.research.google.com/*",
+        "*://docs.google.com/*"
       ],
       "js": ["content.js"],
       "run_at": "document_end"
@@ -41,6 +44,12 @@
     {
       "matches": ["*://colab.research.google.com/*"],
       "js": ["colabBridge.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["*://docs.google.com/*"],
+      "js": ["docsBridge.js"],
       "run_at": "document_start",
       "world": "MAIN"
     }

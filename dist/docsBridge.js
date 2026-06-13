@@ -1,0 +1,5 @@
+(function(){if(window.__phitronDocsBridgeLoaded)return;window.__phitronDocsBridgeLoaded=!0;const d="PHITRON_DOCS_MODEL_REQUEST",c="PHITRON_DOCS_MODEL_RESPONSE",a="",l=/[\x00-\x09\x0b-\x1c\x1e-\x1f]/g;function i(t){return t.split(a).join(" | ").replace(l,`
+`).replace(/\n{3,}/g,`
+
+`)}function u(){const t=window,n=t.DOCS_modelChunk;if(n){const s=Array.isArray(n.chunk)?n.chunk:[],r=[];for(const o of s)typeof o.s=="string"&&o.s.length>0&&r.push(i(o.s));if(r.length>0){const o=r.join(`
+`);return console.log("[DocsBridge] DOCS_modelChunk text length:",o.length),o}}const e=t.DOCS_model;if(e&&typeof e.getText=="function")try{const s=e.getText();if(s&&s.length>0)return i(s)}catch{}return console.warn("[DocsBridge] No Docs model found in page globals"),null}window.addEventListener("message",t=>{if(t.source!==window||!t.data||t.data.type!==d)return;const n=t.data.requestId;try{const e=u();window.postMessage({type:c,requestId:n,text:e},"*")}catch(e){window.postMessage({type:c,requestId:n,text:null,error:e?.message},"*")}})})();
