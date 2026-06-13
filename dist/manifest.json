@@ -8,7 +8,8 @@
     "scripting",
     "activeTab",
     "tabs",
-    "sidePanel"
+    "sidePanel",
+    "clipboardRead"
   ],
   "action": {
     "default_title": "Phitron Evaluator"
